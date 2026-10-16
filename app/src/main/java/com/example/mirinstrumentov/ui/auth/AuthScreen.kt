@@ -185,7 +185,7 @@ fun AuthScreen(
                         onValueChange = {
                             fullName = it
                         },
-                        hint = "ФИО",
+                        hint = "Имя",
                         enabled = !state.isLoading
                     )
                 }
