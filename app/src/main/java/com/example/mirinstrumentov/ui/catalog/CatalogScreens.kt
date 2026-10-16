@@ -84,6 +84,17 @@ fun CatalogAsset(
     description: String,
     modifier: Modifier = Modifier
 ) {
+
+    Box (modifier = modifier, contentAlignment = Alignment.Center)
+    {
+        Text(
+            text = "нет изобр",
+            color = CatalogGray,
+            fontSize = 12.sp,
+            textAlign = TextAlign.Center
+        )
+    }
+    /*
     val context = LocalContext.current
     val id = remember(context, fileName) { drawableId(context, fileName) }
     Box(modifier = modifier, contentAlignment = Alignment.Center) {
@@ -104,6 +115,7 @@ fun CatalogAsset(
             )
         }
     }
+    */
 }
 
 // image_url хранит путь файла внутри Supabase Storage, например "folder/hammer.svg".

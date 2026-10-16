@@ -28,7 +28,7 @@ private fun CatalogPreview() {
 private fun ToolsPreview() {
     CategoryToolsScreen(
         title = "Электроинструменты", tools = sample,
-        favorites = setOf(1, 2), busy = emptySet(),
+        favorites = setOf(2, 3), busy = emptySet(),
         onBack = {}, onTool = {}, onFavorite = {}, onCart = {}
     )
 }
