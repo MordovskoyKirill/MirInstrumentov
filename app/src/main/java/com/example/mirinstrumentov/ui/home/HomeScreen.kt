@@ -142,7 +142,6 @@ fun HomeScreen(email: String, isLoading: Boolean, message: String?, onLogout: ()
                 tab == ShopTab.ORDERS -> {
                     Column(Modifier.fillMaxSize()) {
                         ScreenHeading("Заказы")
-                        CenteredText("Экран истории заказов будет реализован отдельно")
                     }
                 }
                 tab == ShopTab.PROFILE -> {
@@ -184,7 +183,7 @@ private fun ShopBottomBar(current: ShopTab, onChange: (ShopTab) -> Unit) {
             val selected = current == tab
             val icon = when (tab) {
                 ShopTab.CATALOG -> "ic_catalog"
-                ShopTab.FAVORITES -> if (selected) "ic_favorite_filled" else "ic_favorite"
+                ShopTab.FAVORITES -> "ic_favorite"
                 ShopTab.CART -> "ic_cart"
                 ShopTab.ORDERS -> "ic_orders"
                 ShopTab.PROFILE -> "ic_profile"

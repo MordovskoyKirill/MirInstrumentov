@@ -84,17 +84,6 @@ fun CatalogAsset(
     description: String,
     modifier: Modifier = Modifier
 ) {
-
-    Box (modifier = modifier, contentAlignment = Alignment.Center)
-    {
-        Text(
-            text = "нет изобр",
-            color = CatalogGray,
-            fontSize = 12.sp,
-            textAlign = TextAlign.Center
-        )
-    }
-    /*
     val context = LocalContext.current
     val id = remember(context, fileName) { drawableId(context, fileName) }
     Box(modifier = modifier, contentAlignment = Alignment.Center) {
@@ -105,17 +94,9 @@ fun CatalogAsset(
                 contentScale = ContentScale.Fit,
                 modifier = Modifier.fillMaxSize().padding(5.dp)
             )
-        } else {
-            FigmaIcon(
-                name = "ic_tool",
-                contentDescription = description,
-                tint = CatalogGray.copy(alpha = .45f),
-                modifier = Modifier.size(52.dp),
-                fallback = "▢"
-            )
         }
     }
-    */
+
 }
 
 // image_url хранит путь файла внутри Supabase Storage, например "folder/hammer.svg".

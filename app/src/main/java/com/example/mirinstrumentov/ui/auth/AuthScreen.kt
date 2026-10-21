@@ -145,6 +145,19 @@ fun AuthScreen(
                     )
                 )
 
+                if (registerMode) {
+                    AuthTextField(
+                        value = fullName,
+                        onValueChange = {
+                            fullName = it
+                        },
+                        hint = "Имя",
+                        enabled = !state.isLoading
+                    )
+
+                    Spacer(modifier = Modifier.height(15.dp))
+                }
+
                 AuthTextField(
                     value = email,
                     onValueChange = { email = it },
@@ -177,20 +190,8 @@ fun AuthScreen(
                         isPassword = true,
                         enabled = !state.isLoading
                     )
-
-                    Spacer(modifier = Modifier.height(15.dp))
-
-                    AuthTextField(
-                        value = fullName,
-                        onValueChange = {
-                            fullName = it
-                        },
-                        hint = "Имя",
-                        enabled = !state.isLoading
-                    )
                 }
 
-                // Ошибки Supabase и проверки данных
                 if (state.message != null) {
 
                     Spacer(modifier = Modifier.height(8.dp))

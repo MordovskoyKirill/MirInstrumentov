@@ -6,8 +6,8 @@ object StorageImages {
 
     // Названия бакетов из Supabase -> Storage.
     // Если все изображения в одном бакете, укажи здесь одинаковое имя.
-    const val CATEGORY_BUCKET = "categories"
-    const val TOOL_BUCKET = "tools"
+    const val CATEGORY_BUCKET = "ui_images"
+    const val TOOL_BUCKET = "ui_images"
 
     fun publicUrl(path: String?, bucket: String): String? {
         val objectPath = path?.trim()?.trimStart('/')?.takeIf { it.isNotBlank() }
